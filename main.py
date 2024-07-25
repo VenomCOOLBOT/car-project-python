@@ -11,6 +11,7 @@ while is_game_running:
               "off - to turn off the car\n"
               "quit - to exit")
     elif command == "quit":
+        print("Exiting the game...")
         is_game_running = False
     elif command == "off":
         if not is_car_on:
@@ -29,16 +30,16 @@ while is_game_running:
     elif command == "go":
         if is_car_on and has_car_stopped:
             has_car_stopped = False
-            print("Car is moving forward!")
+            print("We're moving forward! About time!")
         elif not is_car_on:
             print("Car is off dumbass...")
         else:
-            print("We are already moving...")
+            print("We're already moving, captain obvious!")
     elif command == "stop":
         if has_car_stopped:
             print("Car has already stopped bozo...")
         else:
             has_car_stopped = True
-            print("Car has stopped...")
+            print("The car has stopped. Happy now?")
     else:
-        print("I don't understand that...")
+        print("Invalid command. Type 'help' if you need it... seriously, how hard can it be?")
